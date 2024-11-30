@@ -26,9 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         for (bouquet in bouquets) {
             val flowers = relationDao.getFlowersForBouquet(bouquet.id)
-            Log.d("Bouquet", "Букет: ${bouquet.name}, id: ${bouquet.id}}")
+            Log.d("Bouquet", "Букет: ${bouquet.name}, Оформление: ${bouquet.decoration}, id: ${bouquet.id}")
             for (flower in flowers) {
-                Log.d("Bouquet", " - ${flower.quantity}x ${flower.name} (${flower.color})")
+                Log.d("Bouquet", " - ${flower.quantity}x ${flower.name} (${flower.color}) - ${flower.country}")
             }
         }
     }

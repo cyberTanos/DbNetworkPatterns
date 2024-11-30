@@ -14,7 +14,7 @@ interface BouquetFlowerRelationDao {
 
     @Query(
         """
-        SELECT f.id ,f.name, f.color, r.quantity 
+        SELECT f.id ,f.name, f.color, r.quantity, f.country
         FROM bouquet_flower_relation r 
         JOIN flowers f ON r.flowerId = f.id 
         WHERE r.bouquetId = :bouquetId

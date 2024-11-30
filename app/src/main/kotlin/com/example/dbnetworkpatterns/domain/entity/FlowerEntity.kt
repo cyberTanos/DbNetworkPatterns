@@ -8,5 +8,6 @@ data class Flower(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val name: String,
     val color: String,
-    val stock: Int
+    val stock: Int,
+    val country: String
 )

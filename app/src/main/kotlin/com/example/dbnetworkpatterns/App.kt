@@ -3,6 +3,7 @@ package com.example.dbnetworkpatterns
 import android.app.Application
 import androidx.room.Room
 import com.example.dbnetworkpatterns.data.local.FlowerShopDatabase
+import com.example.dbnetworkpatterns.data.local.MIGRATION_1_2
 
 class App : Application() {
 
@@ -16,6 +17,8 @@ class App : Application() {
             applicationContext,
             FlowerShopDatabase::class.java,
             "database"
-        ).build()
+        )
+            .addMigrations(MIGRATION_1_2)
+            .build()
     }
 }
